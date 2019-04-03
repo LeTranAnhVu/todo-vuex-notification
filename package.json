@@ -5,8 +5,8 @@
   "author": "Hugh <hieu.tranminhhcm@gmail.com>",
   "private": true,
   "scripts": {
-    "dev": "webpack-dev-server --inline --progress --config build/webpack.dev.conf.js",
-    "start": "PORT:4200 npm run dev",
+    "dev": "PORT:4200webpack-dev-server --inline --progress --config build/webpack.dev.conf.js",
+    "start": "node build/build.js && node server.js",
     "unit": "jest --config test/unit/jest.conf.js --coverage",
     "test": "npm run unit",
     "lint": "eslint --ext .js,.vue src test/unit",
